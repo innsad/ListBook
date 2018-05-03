@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Книжная полка</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>Книжная полка</header>
+
+    <button class="primary-button" id="btnAddBook" onclick="showModal()">Добавить книгу</button>
+
+    <div id="modalArea">
+        <div class="editBookModal">
+            <header id="editBook">Редактирование книги</header>
+            <div class="wrapperBookInfo">
+                <span>Наименование</span>
+                <br />
+                <input type="text" class="inputBookInfo" id="nameBook" name="name">
+            </div>
+            <div class="wrapperBookInfo">
+                <span>Автор</span>
+                <br />
+                <input type="text" class="inputBookInfo" id="authorBook" name="author">
+            </div>
+            <div class="wrapperBookInfo">
+                <span>Год</span>
+                <br />
+                <input type="text" class="inputBookInfo" id="yearBook" name="year">
+            </div>
+            <div class="wrapperBookInfo">
+                <span>Изображение</span>
+                <br />
+                <input type="text" class="inputBookInfo" id="imageBook" name="image">
+            </div>
+
+            <button class="primary-button" id="btnSaveBook">Сохранить</button>
+            <button class="primary-button" id="btnCancel" onclick="closeModal()">Отменить</button>
+        </div>
+    </div>
+
+    <div id="listBooks">
+        <div class="listBookItem">
+            <img class='bookCover' src="https://i.livelib.ru/boocover/1000833086/200/c880/Devid_Sojer_Makfarland__JavaScript_i_jQuery._Ischerpyvayuschee_rukovodstvo__DVDR.jpg" alt='Обложка книги'>
+            <div class='listItemTextWrapper'>
+                <span class='titleBook'>JS и JQuery</span>
+                <span class='authorBook'>Дэвид Сойер</span>
+                <span class='yearBook'>2016г</span>
+            </div>
+            <div class='secondaryBtnWrapper'>
+                <button class='secondary-button'>Редактировать</button>
+                <button class='secondary-button'>Удалить</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
